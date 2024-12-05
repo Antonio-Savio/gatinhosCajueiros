@@ -1,0 +1,41 @@
+.main{
+    padding-top: 70px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerHero{
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerHero h1,
+.containerHero h4{
+    white-space: break-spaces;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.bannerWrapper{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+    background: fixed;
+}

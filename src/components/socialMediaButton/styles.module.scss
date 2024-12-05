@@ -1,0 +1,18 @@
+.link{
+    background-color: #E1306C;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #E1306C;
+    transition: 0.4s;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.link:hover{
+    background-color: #fff;
+    color: #E1306C;
+}

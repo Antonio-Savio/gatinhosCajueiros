@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins&family=Roboto&display=swap');
+
+:root {
+  --primary-color: rgb(180, 206, 78);
+  --secondary-color: #CADD80;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+button{
+  cursor: pointer;
+  border: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul, li{
+  list-style: none;
+}

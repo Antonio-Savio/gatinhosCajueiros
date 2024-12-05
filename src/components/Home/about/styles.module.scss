@@ -1,0 +1,24 @@
+.quemsomos{
+    padding-top: 70px;
+}
+
+.quemsomos h1{
+    font-size: xx-large;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.quemsomos p {
+    white-space: break-spaces;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+@media (min-width: 640px){
+    .quemsomos p {
+        text-align: center;
+    }
+}
