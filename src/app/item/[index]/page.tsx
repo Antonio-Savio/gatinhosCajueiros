@@ -7,6 +7,45 @@ import styles from './styles.module.scss'
 import { FaWhatsapp } from "react-icons/fa"
 import { redirect } from "next/navigation"
 import { Footer } from "@/components/footer"
+import { Metadata } from "next"
+
+const { object }: HomeProps = await getDataHome()
+
+export async function generateMetadata(
+    props: {
+        params: Promise<{ index: string }>
+    }
+): Promise<Metadata>{
+    const { index } = await props.params
+
+    try{
+        const item = object.metadata.lojinha_caju[Number(index)]
+
+        return {
+            title: `${item.titulo} - Gatinhos Cajueiros`,
+            description: `${item.descricao.slice(0, 100)}...`,
+            openGraph: {
+                title: "Gatinhos Cajueiros",
+                images: [item.imagem.url]
+            },
+                robots: {
+                index: true,
+                follow: true,
+                nocache: true,
+                googleBot: {
+                    index: true,
+                    follow: true,
+                    noimageindex: true,
+                }
+            }
+        }
+    } catch {
+        return {
+            title: "Gatinhos Cajueiros"
+        }
+    }
+}
+
 
 function isParamValid(object: HomeProps['object'], index: string){
     const productExists = object.metadata.lojinha_caju.find((item, id) => id === Number(index))
@@ -21,7 +60,6 @@ export default async function StoreItem(
     }
 ){
     const { index } = await props.params
-    const { object }: HomeProps = await getDataHome();
     isParamValid(object, index)
 
     const item = object.metadata.lojinha_caju[Number(index)]
@@ -44,11 +82,11 @@ export default async function StoreItem(
                     </div>
 
                     <div>
+                        <p className={styles.price}>
+                            <strong>Valor: </strong>{item.preco}
+                        </p>
                         <p className={detailStyles.description}>
                             {item.descricao}
-                        </p>
-                        <p className={styles.price}>
-                            <strong>Preço: {item.preco}</strong>
                         </p>
                         <a 
                             href={`https://api.whatsapp.com/send?phone=55${whatsapp.numero}&text=Olá! Vi no site que o(a) ${item.titulo} está disponível e me interessei! ❤️`}
@@ -61,7 +99,6 @@ export default async function StoreItem(
                     </div>
                 </div>
             </main>
-
         </Container>
 
         <Footer/>
