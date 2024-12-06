@@ -27,7 +27,7 @@
 }
 
 .donation{
-    background-color: rgb(180, 206, 78);
+    background-color: var(--primary-color);
     padding: 20px;
     margin-top: 10px;
     border-radius: 10px;
@@ -42,7 +42,6 @@
     .section{
         display: flex;
         flex-direction: column;
-        // align-items: center;
     }
 
     .section p{
