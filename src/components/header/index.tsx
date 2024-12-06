@@ -1,7 +1,6 @@
 "use client"
 import { useState, useEffect, useRef } from 'react'
 import styles from './styles.module.scss'
-import '@/app/globals.scss'
 import Link from 'next/link'
 import Image from 'next/image'
 import GatinhosLogo from '@/../public/logo.png'
