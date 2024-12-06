@@ -85,7 +85,7 @@ export default async function StoreItem(
                         <p className={styles.price}>
                             <strong>Valor: </strong>{item.preco}
                         </p>
-                        <p className={detailStyles.description}>
+                        <p className={styles.description}>
                             {item.descricao}
                         </p>
                         <a 

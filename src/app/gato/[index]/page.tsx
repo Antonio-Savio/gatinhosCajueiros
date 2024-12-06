@@ -1,4 +1,5 @@
 import detailStyles from '@/utils/styles/detailPage.module.scss'
+import styles from './styles.module.scss'
 import { getDataHome } from '@/utils/actions/get-data'
 import { HomeProps } from '@/utils/types/home'
 import { Metadata } from 'next'
@@ -74,7 +75,7 @@ export default async function Gato(
                         </div>
 
                         <div>
-                            <p className={detailStyles.description}>
+                            <p className={styles.description}>
                                 {cat.descricao}
                             </p>
                             <a 
