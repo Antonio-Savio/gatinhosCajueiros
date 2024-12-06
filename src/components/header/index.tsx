@@ -78,7 +78,7 @@ export function Header(){
                     </nav>
 
                     <div className={styles.menu} ref={menuRef} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
-                        {menuOpen ? <X /> : <Menu />}
+                        {menuOpen ? <X size={28} /> : <Menu size={28} />}
                     </div>
                 </div>
             </div>
