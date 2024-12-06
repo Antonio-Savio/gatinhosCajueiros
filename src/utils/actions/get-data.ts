@@ -1,6 +1,13 @@
+import { redirect } from "next/navigation";
+
+// function delay(ms: number){
+//     return new Promise(resolve => setTimeout(resolve, ms))
+// }
+
 export async function getDataHome(){
     try{
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/objects/674912653dbd639ab303fc30?pretty=true&read_key=${process.env.READ_KEY}&depth=1&props=slug,title,metadata,type`)
+        // await delay(2500)
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/objects/674912653dbd639ab303fc30?pretty=true&read_key=${process.env.READ_KEY}&depth=1&props=slug,title,metadata,type`, { next: { revalidate: 120 } })
 
         if (!res.ok) {
             throw new Error("Failed to fetch data")
@@ -8,6 +15,7 @@ export async function getDataHome(){
 
         return res.json();
     } catch(error){
-        throw new Error("Failed to fetch data")
+        console.log("Failed to fetch data: ", error)
+        redirect('/')
     }
 }
