@@ -4,7 +4,7 @@ import { getDataHome } from "@/utils/actions/get-data"
 import { HomeProps } from "@/utils/types/home"
 import detailStyles from '@/utils/styles/detailPage.module.scss'
 import styles from './styles.module.scss'
-import { FaWhatsapp } from "react-icons/fa"
+import { FaInstagram } from "react-icons/fa"
 import { redirect } from "next/navigation"
 import { Footer } from "@/components/footer"
 import { Metadata } from "next"
@@ -63,7 +63,6 @@ export default async function StoreItem(
     isParamValid(object, index)
 
     const item = object.metadata.lojinha_caju[Number(index)]
-    const whatsapp = object.metadata.whatsapp
 
     return(
         <>
@@ -89,12 +88,12 @@ export default async function StoreItem(
                             {item.descricao}
                         </p>
                         <a 
-                            href={`https://api.whatsapp.com/send?phone=55${whatsapp.numero}&text=Olá! Vi no site que o(a) ${item.titulo} está disponível e me interessei! ❤️`}
+                            href={"https://www.instagram.com/direct/t/17842587092150636"}
                             className={detailStyles.link}
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            <FaWhatsapp size={20}/> {whatsapp.titulo_loja}
+                            <FaInstagram size={20}/> Compre seu item pelo Direct
                         </a>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 import { Container } from '@/components/container'
 import { redirect } from 'next/navigation'
 import Image from 'next/image'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
 import { Footer } from '@/components/footer'
 
 const { object }: HomeProps = await getDataHome()
@@ -79,12 +79,12 @@ export default async function Gato(
                                 {cat.descricao}
                             </p>
                             <a 
-                                href={`https://api.whatsapp.com/send?phone=55${whatsapp.numero}&text=Olá! Vi no site que ${cat.nome_animal} está disponível para adoção e fiquei muito interessado(a)! ❤️ Poderia me passar mais informações sobre ele(a)?`}
+                                href={`https://www.instagram.com/direct/t/17842587092150636`}
                                 className={detailStyles.link}
                                 target='_blank'
                                 rel='noopener noreferrer'
                             >
-                                <FaWhatsapp size={20}/>{whatsapp.titulo_adocao}
+                                <FaInstagram size={20}/>Tire suas dúvidas pelo Direct
                             </a>
                         </div>
                     </div>
