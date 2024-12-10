@@ -88,7 +88,7 @@ export default async function StoreItem(
                             {item.descricao}
                         </p>
                         <a 
-                            href={"https://www.instagram.com/direct/t/17842587092150636"}
+                            href={"https://ig.me/m/gatinhoscajueiros"}
                             className={detailStyles.link}
                             target='_blank'
                             rel='noopener noreferrer'
