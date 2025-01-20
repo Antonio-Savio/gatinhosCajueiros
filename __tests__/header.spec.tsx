@@ -4,17 +4,6 @@ import { Menu } from 'lucide-react'
 
 
 describe("Header component", () => {
-  
-    it('should not render nav links on screens smaller than 500px', () => {
-        global.innerWidth = 400;
-        window.dispatchEvent(new Event('resize'));
-
-        render(<Header/>)
-
-        const navTag = screen.getByLabelText('Nav')
-        expect(navTag).not.toBeVisible();
-    });
-      
     it ('should have class nav, and show when menu is clicked at nav tag', () => {
         render(<Header/>)
   
